@@ -103,9 +103,15 @@
 
 * `pacman -S xf86-input-evdev`    #安装键鼠驱动
 
+* `pacman -S open-vm-tools`    #安裝vmtools工具
+
+* `systemctl enable vmware-vmblock-fuse.service`    #开机启动vmtools
+
 * `pacman -S xorg-server xorg-server-utils xorg-xinit`    #安装X环境
 
 * `pacman -S ttf-dejavu wqy-zenhei wqy-microhei`    #安装字体
+
+* `pacman -S mate mate-extra`    #安装mate
 
 * `pacman -S xfce4`    #安装xfce4
 
@@ -139,5 +145,33 @@
 
 * `reboot`
 
+### 设置终端颜色
 
+* `nano ~/.bashrc`
 
+ ```bash
+ #PS1='[\u@\h \W]\$ '  # Default
+ PS1='\[\e[1;31m\][\u@\h \W]\$\[\e[0m\] '
+ ```
+
+### 安裝fcitx软件
+
+* `sudo pacman -S fcitx-im`    #安装fcitx输入法
+
+* `nano ~/.xinitrc`
+
+ ```bash
+ export LANG=zh_CN.UTF-8
+ export LC_ALL="zh_CN.UTF-8"
+ export GTK_IM_MODULE=fcitx
+ export QT_IM_MODULE=fcitx
+ export XMODIFIERS="@im=fcitx"
+ ```
+
+### 安裝firefox浏览器
+
+* `sudo pacman -S firefox firefox-i18n-zh-cn`
+
+### 安裝Gvim
+
+* `sudo pacman -S gvim-python3`
