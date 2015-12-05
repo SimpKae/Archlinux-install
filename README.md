@@ -175,3 +175,7 @@
 ### 安裝Gvim
 
 * `sudo pacman -S gvim-python3`
+
+### 时间同步
+
+* `sudo timedatectl set-ntp true`
