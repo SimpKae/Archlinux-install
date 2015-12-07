@@ -152,6 +152,7 @@
  ```bash
  #PS1='[\u@\h \W]\$ '  # Default
  PS1="\[\033[40;33;1m\][\!]\`if [[ \$? =   "0" ]]; then echo "\\[\\033[32m\\]"; else echo   "\\[\\033[31m\\]"; fi\`[\u@\h: \`if [[ `pwd|wc -c|tr -d "   "` > 18 ]]; then echo "\\W"; else echo "\\w";   fi\`]\\$\[\033[0m\] "; echo -ne "\033]0;`hostname -s`:`pwd`\007"
+ PS1="\[\e[30m\][\[\e[35m\]\u\[\e[m\]\[\e[35m\]@\[\e[35m\]\h \[\e[31m\]\w\[\e[30m\]]\[\e[31m\]$\[\e[m\] "
  ```
 
 ### 安裝fcitx软件
